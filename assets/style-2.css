@@ -1,6 +1,6 @@
 .instilogo {
     height: 70px;
-    padding-right: 50px;
+    padding-right: 100px;
     filter: grayscale(20%);
 }
 
@@ -43,7 +43,7 @@ a:hover {
 }
 
 .profilepic {
-    width: 200px;
+    width: 170px;
     border-radius: 10%;
     /* filter: grayscale(100%); */
 }
