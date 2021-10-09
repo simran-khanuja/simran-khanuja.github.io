@@ -42,8 +42,10 @@ a:hover {
 }
 
 .profilepic {
-    width: 200px;
-    border-radius: 10%;
+    width: 250px;
+    border-radius: 5%;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
     /* filter: grayscale(100%); */
 }
 
