@@ -1,1 +1,1 @@
-# simran-khanuja.github.io
+Template forked from [Sebastin Santy](https://sebastinsanty.com/)
