@@ -85,11 +85,32 @@
                         </p>
 
                         <p>
-                            My research focus is on <strong>cultural inclusivity and diversity</strong> within multimodal (vision-text)
-                            generation and understanding, but I also explore image and video generation more broadly. In my PhD,
-                            I'm revisiting the age old problem of translation, and exploring how it extends to multiple modalities, especially the visual modality. Check out this
-                            <a class="in-text" href="https://github.com/simran-khanuja/awesome-cultural-nlp" target="_blank">GitHub repo</a>
-                            where I've been collecting resources for cultural NLP!
+                            Broadly, I am passionate about making AI genuinely useful for real-world applications and a diverse set of users. A lot of my 
+                            research has drawn inspiration from what people actually need, but these systems lack. I am always excited to explore new directions which serves this grander goal,
+                            but my work thus far has focused on three main areas:
+                        </p>
+                        <p>
+                            <strong>(1) LLM/Multimodal Evaluation:</strong> Progress hinges on measuring the right things, so I design
+                            benchmarks and automatic metrics that align measurement with real-world use and stress-test models where they
+                            actually break &mdash; across culturally grounded image generation
+                            (<a class="in-text" href="https://machine-transcreation.github.io/image-transcreation/" target="_blank">image transcreation</a>,
+                            <strong>Best Paper, EMNLP 2024</strong>), multilingual speech
+                            (<a class="in-text" href="assets/fleurs_slt.pdf" target="_blank">FLEURS</a>,
+                            <strong>Best Paper, SLT 2022</strong>), and
+                            code-switching (<a class="in-text" href="https://microsoft.github.io/GLUECoS/" target="_blank">GLUECoS</a>).
+                        </p>
+                        <p>
+                            <strong>(2) Models/Methodological Interventions:</strong> I probe and improve model representations for broader linguistic and cultural coverage &mdash;
+                            <a class="in-text" href="https://arxiv.org/pdf/2103.10730.pdf" target="_blank">MuRIL</a>,
+                            <a class="in-text" href="https://neulab.github.io/Pangea/" target="_blank">Pangea</a> and
+                            <a class="in-text" href="https://arxiv.org/abs/2508.07414" target="_blank">Cultural Pangea</a>, and inference-time
+                            <a class="in-text" href="https://arxiv.org/pdf/2603.23301" target="_blank">steering</a> for controllable,
+                            culturally aware generation.
+                        </p>
+                        <p>
+                            <strong>(3) Data Selection &amp; Synthetic Data:</strong> Building for the long-tail of users always comes with data bottlenecks. I've worked on data-efficient fine-tuning &mdash; labeling strategies under a fixed budget
+                            (<a class="in-text" href="https://arxiv.org/abs/2311.06379" target="_blank">DeMuX</a>) &mdash; and my in-progress/proposed work builds
+                            synthetic data pipelines to improve diversity sampling for text-to-image models and train multimodal generative models for applications like advertising and education.
                         </p>
 
                         <p>
@@ -366,7 +387,16 @@
                 <section id="publications">
                     <h2 class="header">Publications</h2>
 
-                    <div class="publication-card">
+                    <div class="pub-filters" role="group" aria-label="Filter publications by area">
+                        <button class="pub-filter active" data-filter="all" data-tip="All publications">All</button>
+                        <button class="pub-filter" data-filter="evals" data-tip="Benchmarks/metrics that stress-test models and align measurement with real-world use">LLM/Multimodal Evals</button>
+                        <button class="pub-filter" data-filter="methods" data-tip="Models and methodological interventions for broader linguistic and cultural coverage">Models/Methods</button>
+                        <button class="pub-filter" data-filter="data" data-tip="Data-efficient learning — which data to label and use under a fixed budget">Data Selection</button>
+                        <button class="pub-filter" data-filter="interp" data-tip="Probing model representations and steering/aligning model behavior">Interp / Alignment</button>
+                        <button class="pub-filter" data-filter="zero" data-tip="Work that proposes a new task or changes the task definition for a problem">0.x &rarr; 1</button>
+                    </div>
+
+                    <div class="publication-card" data-cat="methods interp">
                         <span class="papertitle">Steering LLMs for Culturally Localized Generation</span>
                         <div class="paper-authors">
                             <span class="thisauthor">Simran Khanuja</span>, Hongbin Liu, Shujian Zhang, John Lambert, Mingqing Chen, Rajiv Mathews, Lun Wang
@@ -377,7 +407,7 @@
                         </div>
                     </div>
 
-                    <div class="publication-card">
+                    <div class="publication-card" data-cat="methods">
                         <span class="papertitle">HILITe: Human-AI Collaborative Framework for Image Transcreation</span>
                         <div class="paper-authors">
                             <span class="thisauthor">Simran Khanuja</span>, Yutong Zhang, Aayush Bheemaiah, Jainish Patel, Arya Pasumarthi, Armaan Sharma, Sophia Li, Yueqi Song, Michael Saxon, Diyi Yang, Graham Neubig
@@ -385,7 +415,7 @@
                         <span class="conf"><a class="confshort" href="https://sites.google.com/view/hciandnlp/home">HCI+NLP@EMNLP '25</a> | Under Conference Submission</span>
                     </div>
 
-                    <div class="publication-card">
+                    <div class="publication-card" data-cat="evals zero">
                         <span class="papertitle">CAIRE: Cultural Attribution of Images by Retrieval-Augmented Evaluation</span>
                         <div class="paper-authors">
                             Arnav Yayavaram*, Siddharth Yayavaram*, <span class="thisauthor">Simran Khanuja</span>*, Michael Saxon, Graham Neubig
@@ -398,7 +428,7 @@
                         </div>
                     </div>
 
-                    <div class="publication-card">
+                    <div class="publication-card" data-cat="evals">
                         <span class="papertitle">Towards Automatic Evaluation for Image Transcreation</span>
                         <div class="paper-authors">
                             <span class="thisauthor">Simran Khanuja</span>*, Vivek Iyer*, Claire He, Graham Neubig
@@ -411,7 +441,7 @@
                         </div>
                     </div>
 
-                    <div class="publication-card">
+                    <div class="publication-card" data-cat="methods">
                         <span class="papertitle">Pangea: A Fully Open Multilingual Multimodal LLM for 39 Languages</span>
                         <div class="paper-authors">
                             Xiang Yue*, Yueqi Song*, Akari Asai, Seungone Kim, Jean de Dieu Nyandwi, <span class="thisauthor">Simran Khanuja</span>, Anjali Kantharuban, Lintang Sutawika, Sathyanarayanan Ramamoorthy, Graham Neubig
@@ -424,7 +454,19 @@
                         </div>
                     </div>
 
-                    <div class="publication-card award">
+                    <div class="publication-card" data-cat="methods">
+                        <span class="papertitle">Grounding Multilingual Multimodal LLMs With Cultural Knowledge (Cultural Pangea)</span>
+                        <div class="paper-authors">
+                            Jean de Dieu Nyandwi, Yueqi Song, <span class="thisauthor">Simran Khanuja</span>, Graham Neubig
+                        </div>
+                        <span class="conf"><a class="confshort" href="https://2025.emnlp.org/">EMNLP 2025</a> | Conference on Empirical Methods in Natural Language Processing</span>
+                        <div class="paper-links">
+                            <a class="tag" href="https://arxiv.org/abs/2508.07414" target="_blank">pdf</a>
+                            <a class="tag" href="https://huggingface.co/neulab/CulturalPangea-7B" target="_blank">huggingface</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-card award" data-cat="methods">
                         <span class="badge badge-sp">&#127942; Best Paper Runner-Up</span>
                         <span class="papertitle">HILITE: Human-in-the-loop Interactive Tool for Image Editing</span>
                         <div class="paper-authors">
@@ -433,7 +475,7 @@
                         <span class="conf"><a class="confshort" href="https://studentpapers-bigdata2024.netlify.app/">IEEE BigData 2024</a> | IEEE International Conference on Big Data (Undergraduate Symposium)</span>
                     </div>
 
-                    <div class="publication-card award">
+                    <div class="publication-card award" data-cat="zero evals">
                         <span class="badge badge-sp">&#127942; Best Paper</span>
                         <span class="papertitle">An image speaks a thousand words, but can everyone listen? On translating images for cultural relevance</span>
                         <div class="paper-authors">
@@ -450,7 +492,7 @@
                         </div>
                     </div>
 
-                    <div class="publication-card">
+                    <div class="publication-card" data-cat="data">
                         <span class="papertitle">DeMuX: Data-efficient Multilingual Learning</span>
                         <div class="paper-authors">
                             <span class="thisauthor">Simran Khanuja</span>, Srinivas Gowriraj, Lucio Dery, Graham Neubig
@@ -466,7 +508,7 @@
                         </div>
                     </div>
 
-                    <div class="publication-card">
+                    <div class="publication-card" data-cat="evals">
                         <span class="papertitle">GlobalBench: A Benchmark for Global Progress in Natural Language Processing</span>
                         <div class="paper-authors">
                             Yueqi Song, Catherine Cui, <span class="thisauthor">Simran Khanuja</span>, Pengfei Liu, ..., Graham Neubig
@@ -478,7 +520,7 @@
                         </div>
                     </div>
 
-                    <div class="publication-card">
+                    <div class="publication-card" data-cat="evals">
                         <span class="papertitle">Multi-lingual and Multi-cultural Figurative Language Understanding</span>
                         <div class="paper-authors">
                             Anubha Kabra*, Emmy Liu*, <span class="thisauthor">Simran Khanuja</span>*, Alham Fikri Aji, Genta Indra Winata, Samuel Cahyawijaya, Anuoluwapo Aremu, Perez Ogayo, Graham Neubig
@@ -491,7 +533,7 @@
                         </div>
                     </div>
 
-                    <div class="publication-card award">
+                    <div class="publication-card award" data-cat="evals">
                         <span class="badge badge-sp">&#127942; Best Paper</span>
                         <span class="papertitle">FLEURS: Few-Shot Learning Evaluation of Universal Representations of Speech</span>
                         <div class="paper-authors">
@@ -504,7 +546,7 @@
                         </div>
                     </div>
 
-                    <div class="publication-card">
+                    <div class="publication-card" data-cat="methods">
                         <span class="papertitle">MergeDistill: Merging Pre-trained Language Models using Distillation</span>
                         <div class="paper-authors">
                             <span class="thisauthor">Simran Khanuja</span>, Melvin Johnson, Partha Talukdar
@@ -517,7 +559,7 @@
                         </div>
                     </div>
 
-                    <div class="publication-card award">
+                    <div class="publication-card award" data-cat="methods">
                         <span class="badge badge-sp">&#128240; Media Coverage</span>
                         <span class="papertitle">MuRIL: Multilingual Representations for Indian Languages</span>
                         <div class="paper-authors">
@@ -536,7 +578,7 @@
                         </p>
                     </div>
 
-                    <div class="publication-card">
+                    <div class="publication-card" data-cat="evals">
                         <span class="papertitle">GLUECoS: An Evaluation Benchmark for Code-Switched NLP</span>
                         <div class="paper-authors">
                             <span class="thisauthor">Simran Khanuja</span>, Sandipan Dandapat, Anirudh Srinivasan, Sunayana Sitaram, Monojit Choudhury
@@ -552,7 +594,7 @@
                         </div>
                     </div>
 
-                    <div class="publication-card">
+                    <div class="publication-card" data-cat="evals">
                         <span class="papertitle">A New Dataset for Natural Language Inference from Code-mixed Conversations</span>
                         <div class="paper-authors">
                             <span class="thisauthor">Simran Khanuja</span>, Sandipan Dandapat, Sunayana Sitaram, Monojit Choudhury
@@ -702,6 +744,25 @@
                 if (link.getAttribute('href') === '#' + current) {
                     link.classList.add('active');
                 }
+            });
+        });
+
+        // Filter publications by research area
+        const pubFilters = document.querySelectorAll('.pub-filter');
+        const pubCards = document.querySelectorAll('#publications .publication-card');
+
+        pubFilters.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+
+                pubFilters.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                pubCards.forEach(card => {
+                    const cats = (card.getAttribute('data-cat') || '').split(' ');
+                    const show = filter === 'all' || cats.includes(filter);
+                    card.classList.toggle('pub-hidden', !show);
+                });
             });
         });
     </script>
