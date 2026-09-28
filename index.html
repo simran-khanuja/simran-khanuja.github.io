@@ -76,7 +76,7 @@
                     <h2 class="header">About</h2>
                     <div class="about">
                         <p>
-                            Hi! I am a fourth-year PhD candidate at the
+                            Hi! I am a final year PhD candidate at the
                             <a class="in-text" href="https://www.lti.cs.cmu.edu/" target="_blank">Language Technologies Institute</a>
                             at Carnegie Mellon University. I am advised by
                             <a class="in-text" href="http://www.phontron.com/" target="_blank">Graham Neubig</a> and have
@@ -102,21 +102,18 @@
                             (<a class="in-text" href="https://microsoft.github.io/GLUECoS/" target="_blank">GLUECoS</a>).
                         </p>
                         <p>
-                            <strong>(2) Models/Methodological Interventions</strong> <em>&mdash; interpretability, alignment, post-training, personalization.</em><br>
-                            I probe and improve model representations for broader linguistic and cultural coverage &mdash;
+                            <strong>(2) Models/Methodological Interventions</strong> <em>&mdash; interpretability, alignment, reward modeling, personalization.</em><br>
+                            I've worked on probing and improve model representations for broader linguistic and cultural coverage &mdash;
                             <a class="in-text" href="https://arxiv.org/pdf/2103.10730.pdf" target="_blank">MuRIL</a>,
                             <a class="in-text" href="https://neulab.github.io/Pangea/" target="_blank">Pangea</a> and
                             <a class="in-text" href="https://arxiv.org/abs/2508.07414" target="_blank">Cultural Pangea</a>, and inference-time
                             <a class="in-text" href="https://arxiv.org/pdf/2603.23301" target="_blank">steering</a> for controllable,
-                            culturally aware generation.
+                            culturally aware generation. I've also worked on improving user-conditioned diversity in image generation (<a class="in-text" href="https://image-study.org/web" target="_blank">T-DIG</a>).
                         </p>
                         <p>
                             <strong>(3) Data Selection &amp; Synthetic Data</strong> <em>&mdash; data-efficient training, synthetic data.</em><br>
-                            Data has consistently been a bottleneck in my research &mdash;
-                            whether in the long tail of languages and cultures, or in applications like advertising and education where much
-                            relevant data is copyrighted. I've worked on data-efficient fine-tuning
-                            (<a class="in-text" href="https://arxiv.org/abs/2311.06379" target="_blank">DeMuX</a>), and my proposed work builds
-                            synthetic data pipelines for diversity sampling in text-to-image models and for training multimodal generative models in these domains.
+                            Much of my work has been in data-scarce settings, like when dealing with the long tail of languages and cultures, or domains like ads/education where data is copyrighted. Some of my work here has been on data-efficient fine-tuning
+                            (<a class="in-text" href="https://arxiv.org/abs/2311.06379" target="_blank">DeMuX</a>), and synthetic data creation for user-conditioned diversity in image generation (<a class="in-text" href="https://image-study.org/web" target="_blank">T-DIG</a>).
                         </p>
 
                         <p>
@@ -152,6 +149,10 @@
                     <h2 class="header">Updates</h2>
                     <div class="updates-container">
                         <div class="update-item">
+                            <span class="update-date">Sep 2026</span>
+                            <span class="update-content">Came on a <a href="https://www.youtube.com/watch?v=Z7roOgkIo38" target="_blank">podcast</a> to share my thoughts on some of the most relevant problems in AI today!</span>
+                        </div>
+                        <div class="update-item">
                             <span class="update-date">July 2026</span>
                             <span class="update-content">Our Steering LLMs for Culturally Localized Generation paper is accepted to <a href="https://colmweb.org/">COLM 2026</a>!</span>
                         </div>
@@ -169,7 +170,7 @@
                         </div>
                         <div class="update-item">
                             <span class="update-date">Jan 2026</span>
-                            <span class="update-content">Our CAIRE paper is accepted to EACL 2026 (Main)</a></span>
+                            <span class="update-content">Our <a href="https://arxiv.org/abs/2506.09109" target="_blank">CAIRE</a> paper is accepted to EACL 2026 (Main)</span>
                         </div>
                         <div class="update-item">
                             <span class="update-date">Jan 2026</span>
@@ -404,6 +405,14 @@
                         <button class="pub-filter" data-filter="data" data-tip="Data-efficient learning — which data to label and use under a fixed budget">Data Selection</button>
                         <button class="pub-filter" data-filter="interp" data-tip="Probing model representations and steering/aligning model behavior">Interp / Alignment</button>
                         <button class="pub-filter" data-filter="zero" data-tip="Work that proposes a new task or changes the task definition for a problem">0.x &rarr; 1</button>
+                    </div>
+
+                    <div class="publication-card" data-cat="methods data">
+                        <span class="papertitle">T-DIG: Text-Conditioned Diversity in Image Generation</span>
+                        <div class="paper-authors">
+                            <span class="thisauthor">Simran Khanuja</span>, Rohit Gandikota, Gaurav Parmar, Graham Neubig
+                        </div>
+                        <span class="conf">Preprint coming soon</span>
                     </div>
 
                     <div class="publication-card" data-cat="methods interp">
