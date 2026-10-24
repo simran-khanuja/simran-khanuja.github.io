@@ -47,7 +47,8 @@
         .tldr { color: var(--text-primary); }
         .aside { color: var(--text-muted); font-style: italic; }
         .post-top-note { color: var(--text-primary); background: var(--secondary-bg); border-left: 3px solid var(--accent-warm); border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0; padding: 0.75rem 1rem; margin-bottom: 1.75rem; }
-        .post-credit { margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border-light); color: var(--text-muted); font-size: 0.95rem; }
+        .post-comments { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-light); }
+        .post-credit { margin-top: 2rem; color: var(--text-muted); font-size: 0.95rem; }
         .post blockquote { margin: 0; padding-left: 1rem; border-left: 3px solid var(--accent-warm); color: var(--text-primary); font-style: italic; }
         .post h3 { color: var(--text-primary); }
         .label { color: var(--accent-warm); font-weight: 600; }
@@ -287,6 +288,27 @@
             <li>Network a lot, give talks, try to be known for a few things. Apply for all the fellowships/awards, they may not be a lot of money but they bring prestige which helps later on.</li>
             <li>Most panelists don’t plan too much in advance, typically 2 years out.</li>
         </ul>
+
+        <!-- Reactions + comments via giscus (stored in this repo's GitHub Discussions, "Announcements" category).
+             Each post gets its own thread, keyed by URL path. -->
+        <section class="post-comments">
+            <script src="https://giscus.app/client.js"
+                data-repo="simran-khanuja/simran-khanuja.github.io"
+                data-repo-id="R_kgDOGMD_uw"
+                data-category="Announcements"
+                data-category-id="DIC_kwDOGMD_u84DJiTA"
+                data-mapping="pathname"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="top"
+                data-theme="light"
+                data-lang="en"
+                data-loading="lazy"
+                crossorigin="anonymous"
+                async>
+            </script>
+        </section>
 
         <p class="post-credit">
             This blog was written entirely by me, and the frontend design was by Claude. All credit for the content goes to the wonderful panelists of the Rising Star Workshops (I simply made notes 😊 )
