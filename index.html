@@ -70,6 +70,7 @@
                     <a href="#publications" class="section-nav-link">Publications</a>
                     <a href="#talks" class="section-nav-link">Talks</a>
                     <a href="#grants" class="section-nav-link">Grants</a>
+                    <a href="blog/" class="section-nav-link">Blog</a>
                 </nav>
 
                 <!-- About Section -->
@@ -742,8 +743,9 @@
         // Smooth scroll for navigation links
         document.querySelectorAll('.section-nav-link').forEach(link => {
             link.addEventListener('click', function(e) {
-                e.preventDefault();
                 const targetId = this.getAttribute('href');
+                if (!targetId.startsWith('#')) return;  // regular links (e.g. Blog) navigate normally
+                e.preventDefault();
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     targetElement.scrollIntoView({ behavior: 'smooth' });
