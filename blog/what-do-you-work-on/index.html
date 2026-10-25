@@ -35,7 +35,7 @@
         .post-meta { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; }
         .post h2 { font-size: 1.65rem; margin: 3.25rem 0 1rem; padding-top: 1.25rem; border-top: 1px solid var(--border-light); }
         .post h2.first { margin-top: 0; padding-top: 0; border-top: 0; }
-        .post h2 em { color: var(--accent-warm); }
+        .post h2 em { color: var(--accent-warm); font-style: normal; }
         .post h2 u { text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
         .post p { margin-bottom: 1.15rem; }
         .post strong { color: var(--text-primary); }
@@ -130,6 +130,7 @@
 
         <figure class="figure">
             <img src="applications.png" alt="Examples of visual localization across Audiovisual Media (Doraemon; Pixar's Inside Out and Zootopia), Education (addition and counting worksheets, US vs. India), and Advertisements (Ferrero Rocher, Coca-Cola), each shown in versions for different countries." loading="lazy" style="width:100%; border-radius: var(--border-radius-sm); border: 1px solid var(--border-light);">
+            <figcaption class="figure-caption">Visual localization in the wild: audiovisual media (Doraemon; Pixar's Inside Out and Zootopia), education (math worksheets, US vs. India), and advertisements (Ferrero Rocher, Coca-Cola), each adapted for different countries. From the image transcreation project page <a class="cite" href="https://machine-transcreation.github.io/image-transcreation/" target="_blank">[10]</a>.</figcaption>
         </figure>
 
         <p>I spent a lot of time reading about how localization is done in several industries outside of AI. It's extremely prevalent and important in movies, ads, education, gaming, websites, and so on. Scholars in translation studies challenge the notion of simply translating words, highlighting that visuals, music, and other elements contribute equally to meaning. While each modality carries its own information, interaction between modalities creates deeper, emergent meanings. Partial translation disturbs this multimodal interaction and causes cognitive dissonance to the receptor. The whole practice goes by the term transcreation, and the basic goal is to evoke the same emotions with the translated content as the source does. The book I read at the time, Media Across Borders [9], gave me a lot of ideas for how to operationalize something like this for machine learning.</p>
