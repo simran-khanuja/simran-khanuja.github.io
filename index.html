@@ -31,6 +31,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+    <!-- Apply a saved light/dark choice before first paint (see assets/theme-toggle.js) -->
+    <script>try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/style-new.css">
 
@@ -794,6 +797,7 @@
             });
         });
     </script>
+    <script src="assets/theme-toggle.js"></script>
 </body>
 
 </html>

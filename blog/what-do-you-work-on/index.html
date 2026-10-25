@@ -25,6 +25,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+    <!-- Apply a saved light/dark choice before first paint (see assets/theme-toggle.js) -->
+    <script>try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
+
     <!-- Shares colors and fonts with the main page -->
     <link rel="stylesheet" href="../../assets/style-new.css">
     <style>
@@ -43,11 +46,15 @@
         .chat { display: flex; flex-direction: column; gap: 0.35rem; margin: 0.5rem 0 1.5rem; }
         .chat .bubble { max-width: 85%; margin: 0; padding: 0.7rem 1rem; line-height: 1.55; border-radius: 1.1rem; }
         .chat .me { align-self: flex-end; background: var(--accent-warm); color: #fff; border-bottom-right-radius: 0.3rem; }
-        .chat .them { align-self: flex-start; background: #EFEAE2; color: var(--text-primary); border-bottom-left-radius: 0.3rem; }
+        .chat .them { align-self: flex-start; background: var(--bubble-bg); color: var(--text-primary); border-bottom-left-radius: 0.3rem; }
         .chat-pause { margin: 0; text-align: center; color: var(--text-muted); letter-spacing: 0.2em; }
         .figure { margin: 2rem 0; }
         .figure-title { font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem; }
         .figure svg { display: block; width: 100%; max-width: 34rem; height: auto; margin: 0 auto; }
+        .figure svg text { fill: var(--text-primary); }
+        .figure svg text.center-label { fill: var(--text-secondary); }
+        :root[data-theme="dark"] .figure svg circle:nth-of-type(2) { stroke: #7F9BCB; fill: #7F9BCB; }
+        @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .figure svg circle:nth-of-type(2) { stroke: #7F9BCB; fill: #7F9BCB; } }
         .figure-caption { color: var(--text-muted); font-size: 0.92rem; margin-top: 0.5rem; }
         .ai-note { font-style: italic; color: var(--text-muted); }
         .refs { padding-left: 1.5rem; font-size: 0.95rem; }
@@ -104,7 +111,7 @@
                     <text x="280" y="408">Outsized</text>
                     <text x="280" y="427">positive impact</text>
                 </g>
-                <text x="280" y="255" font-family="'Source Sans Pro', 'Segoe UI', sans-serif" font-size="13" fill="#5C574F" text-anchor="middle">my perfect problem</text>
+                <text class="center-label" x="280" y="255" font-family="'Source Sans Pro', 'Segoe UI', sans-serif" font-size="13" fill="#5C574F" text-anchor="middle">my perfect problem</text>
             </svg>
             <figcaption class="figure-caption"><em>figure made with Claude</em></figcaption>
         </figure>
@@ -200,7 +207,7 @@
                 data-reactions-enabled="1"
                 data-emit-metadata="0"
                 data-input-position="top"
-                data-theme="light"
+                data-theme="preferred_color_scheme"
                 data-lang="en"
                 data-loading="lazy"
                 crossorigin="anonymous"
@@ -208,6 +215,7 @@
             </script>
         </section>
     </article>
+    <script src="../../assets/theme-toggle.js"></script>
 </body>
 
 </html>

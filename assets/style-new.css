@@ -36,6 +36,97 @@
     --card-padding: 1.5rem;
     --border-radius: 12px;
     --border-radius-sm: 8px;
+
+    /* Chat bubbles in blog posts */
+    --bubble-bg: #EFEAE2;
+
+    color-scheme: light;
+}
+
+/* ==========================================
+   DARK THEME
+   Follows the visitor's system setting unless they pick one with the
+   toggle (assets/theme-toggle.js sets data-theme on <html>).
+   ========================================== */
+:root[data-theme="dark"] {
+    --primary-bg: #171412;            /* Deep warm charcoal */
+    --secondary-bg: #1F1B18;
+    --card-bg: #221E1B;
+    --accent-warm: #C97650;           /* Terracotta, still takes white text */
+    --accent-gold: #D4A23A;
+    --accent-sage: #93B597;
+
+    --text-primary: #EDE6DC;          /* Warm off-white */
+    --text-secondary: #C9C0B4;
+    --text-muted: #9A9188;
+    --text-link: #E39A74;
+    --text-link-hover: #F2B08E;
+
+    --border-light: #332D28;
+    --border-medium: #463E37;
+    --shadow-soft: rgba(0, 0, 0, 0.3);
+    --shadow-medium: rgba(0, 0, 0, 0.45);
+
+    --bubble-bg: #2C2622;
+
+    color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --primary-bg: #171412;
+        --secondary-bg: #1F1B18;
+        --card-bg: #221E1B;
+        --accent-warm: #C97650;
+        --accent-gold: #D4A23A;
+        --accent-sage: #93B597;
+
+        --text-primary: #EDE6DC;
+        --text-secondary: #C9C0B4;
+        --text-muted: #9A9188;
+        --text-link: #E39A74;
+        --text-link-hover: #F2B08E;
+
+        --border-light: #332D28;
+        --border-medium: #463E37;
+        --shadow-soft: rgba(0, 0, 0, 0.3);
+        --shadow-medium: rgba(0, 0, 0, 0.45);
+
+        --bubble-bg: #2C2622;
+
+        color-scheme: dark;
+    }
+}
+
+/* Light/dark toggle (button is added by assets/theme-toggle.js) */
+.theme-toggle {
+    position: fixed;
+    right: calc(1rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    z-index: 200;
+    width: 2.6rem;
+    height: 2.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid var(--border-medium);
+    background: var(--card-bg);
+    color: var(--text-primary);
+    box-shadow: 0 2px 10px var(--shadow-medium);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+    color: var(--accent-warm);
+    border-color: var(--accent-warm);
+}
+
+.theme-toggle svg {
+    width: 1.15rem;
+    height: 1.15rem;
 }
 
 /* ==========================================
@@ -500,7 +591,7 @@ section {
     max-width: 260px;
     padding: 0.45rem 0.6rem;
     background: var(--text-primary);
-    color: #fff;
+    color: var(--primary-bg);
     font-family: var(--font-primary);
     font-size: 0.75rem;
     font-weight: 400;
@@ -940,4 +1031,9 @@ footer a:hover {
 
 .menur {
     margin-top: 1.5rem;
+}
+
+/* Bootstrap's .text-muted is a fixed gray; follow the theme instead */
+.text-muted {
+    color: var(--text-muted) !important;
 }

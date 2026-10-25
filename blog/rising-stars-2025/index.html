@@ -25,6 +25,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+    <!-- Apply a saved light/dark choice before first paint (see assets/theme-toggle.js) -->
+    <script>try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
+
     <!-- Shares colors and fonts with the main page -->
     <link rel="stylesheet" href="../../assets/style-new.css">
     <style>
@@ -302,7 +305,7 @@
                 data-reactions-enabled="1"
                 data-emit-metadata="0"
                 data-input-position="top"
-                data-theme="light"
+                data-theme="preferred_color_scheme"
                 data-lang="en"
                 data-loading="lazy"
                 crossorigin="anonymous"
@@ -314,6 +317,7 @@
             This blog was written entirely by me, and the frontend design was by Claude. All credit for the content goes to the wonderful panelists of the Rising Star Workshops (I simply made notes 😊 )
         </p>
     </article>
+    <script src="../../assets/theme-toggle.js"></script>
 </body>
 
 </html>
