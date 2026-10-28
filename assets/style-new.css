@@ -1037,3 +1037,52 @@ footer a:hover {
 .text-muted {
     color: var(--text-muted) !important;
 }
+
+/* ==========================================
+   JOB MARKET CALLOUT (top of homepage)
+   ========================================== */
+.job-market {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    margin: 1.5rem 0 0.5rem;
+    padding: 1rem 1.25rem;
+    background: var(--secondary-bg);
+    border: 1px solid var(--accent-warm);
+    border-left-width: 5px;
+    border-radius: var(--border-radius-sm);
+    box-shadow: 0 4px 14px var(--shadow-soft);
+    color: var(--text-primary);
+}
+
+.job-market p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.job-market strong {
+    color: var(--accent-warm);
+}
+
+/* small pulsing dot, like an "available" status light */
+.job-market-dot {
+    flex: none;
+    width: 0.7rem;
+    height: 0.7rem;
+    margin-top: 0.5rem;
+    border-radius: 50%;
+    background: var(--accent-warm);
+    box-shadow: 0 0 0 0 var(--accent-warm);
+    animation: job-market-pulse 2s ease-out infinite;
+}
+
+@keyframes job-market-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(196, 112, 75, 0.55); }
+    70%  { box-shadow: 0 0 0 0.6rem rgba(196, 112, 75, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(196, 112, 75, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .job-market-dot { animation: none; }
+}
