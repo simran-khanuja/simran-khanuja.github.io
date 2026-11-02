@@ -223,12 +223,14 @@ a:hover {
 }
 
 @media (min-width: 992px) {
+    /* Fixed width that fits the 200px photo/links plus padding, so wide
+       screens don't leave an empty band to the right of the sidebar. */
     .col-lg-3.sidebar {
-        flex: 0 0 24%;
-        max-width: 24%;
+        flex: 0 0 280px;
+        max-width: 280px;
     }
     .col-lg-9.main-content {
-        flex: 0 0 76%;
+        flex: 1 1 0;
     }
 }
 
